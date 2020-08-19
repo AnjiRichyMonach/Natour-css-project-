@@ -1,0 +1,17 @@
+
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  /*takah agr user default setting change kry ya zoom in kry tb font change ho*/
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9004f9b8-47d9-49a9-b36a-0a28314740b1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="package.json" />
+        <option value="SCSS File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fmqu6fv4U6IClWihFTYxiOPMEX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Areej Anjum\WebstormProjects\Natour first project\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Areej Anjum\WebstormProjects\Natour first project\sass" />
+      <recent name="C:\Users\Areej Anjum\WebstormProjects\Natour first project\html files" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9004f9b8-47d9-49a9-b36a-0a28314740b1" name="Default Changelist" comment="" />
+      <created>1596833834463</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596833834463</updated>
+      <workItem from="1596833840185" duration="10786000" />
+      <workItem from="1596900018359" duration="737000" />
+      <workItem from="1596904702961" duration="13414000" />
+      <workItem from="1596956704367" duration="2044000" />
+      <workItem from="1597000431092" duration="3688000" />
+      <workItem from="1597043892682" duration="2875000" />
+      <workItem from="1597086329708" duration="2551000" />
+      <workItem from="1597168026273" duration="10041000" />
+      <workItem from="1597216475721" duration="3234000" />
+      <workItem from="1597220140906" duration="1692000" />
+      <workItem from="1597226049066" duration="110000" />
+      <workItem from="1597254604437" duration="5084000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#File_Watchers" timestamp="1597255458092">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#File_Watchers/0.0.1366.728@0.0.1366.728" timestamp="1597255458092" />
+    <state x="275" y="23" key="#Notifications" timestamp="1597255035322">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1597255035322" />
+    <state x="462" y="155" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597180033140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="155" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1597180033140" />
+    <state x="350" y="59" width="729" height="669" key="EditFileWatcherDialog" timestamp="1597255455452">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="350" y="59" width="729" height="669" key="EditFileWatcherDialog/0.0.1366.728@0.0.1366.728" timestamp="1597255455452" />
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1597261694514">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597261694514" />
+    <state x="184" y="7" key="SettingsEditor" timestamp="1597255009808">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1597255009808" />
+    <state x="275" y="23" key="scopes" timestamp="1597174684388">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="scopes/0.0.1366.728@0.0.1366.728" timestamp="1597174684388" />
+  </component>
+</project>

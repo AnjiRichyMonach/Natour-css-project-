@@ -1,0 +1,436 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  /*takah agr user default setting change kry ya zoom in kry tb font change ho*/
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**********************************************/
+/*body*/
+/**********************************************/
+body {
+  font-family: "Lato", SansSerif, "Times New Roman";
+  padding: 3rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #777;
+}
+
+/**********************************************/
+/*headings*/
+/**********************************************/
+.first-heading {
+  color: #fff;
+  text-transform: uppercase;
+  /*to remove shakiness in the animation*/
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.first-heading--main {
+  font-weight: 400;
+  font-size: 5rem;
+  letter-spacing: 3rem;
+  -webkit-animation: moveto_right 2s 1s ease-out;
+          animation: moveto_right 2s 1s ease-out;
+}
+
+.first-heading--sub {
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  font-weight: 700;
+  -webkit-animation: moveto_left 2s 1s ease-out;
+          animation: moveto_left 2s 1s ease-out;
+  margin-bottom: 6rem;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  background: -webkit-gradient(linear, left top, right top, from(#55c57a), to(#28b485));
+  background: linear-gradient(to right, #55c57a, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: transparent;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewX(15deg) skewY(2deg) scale(1.1);
+          transform: skewX(15deg) skewY(2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+/**********************************************/
+/*Button*/
+/**********************************************/
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  /*bcz its child is absolute*/
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1.5) scaleY(1.6);
+          transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn:active {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  color: #777;
+  background-color: #fff;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn--animated {
+  /*backwards used to reverse animation flow*/
+  -webkit-animation: moveto-up 0.4s 3s ease-out backwards;
+          animation: moveto-up 0.4s 3s ease-out backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  color: #7ed56f;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #7ed56f;
+  padding: 3px;
+  font-size: 1.6rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.btn-text:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: #7ed56f;
+  color: #fff;
+}
+
+.btn-text:active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.composition {
+  position: relative;
+}
+
+.composition__photos {
+  width: 55%;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  outline-offset: 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.composition__photos--p1 {
+  left: 0;
+  top: -2rem;
+}
+
+.composition__photos--p2 {
+  right: 0;
+  top: 2rem;
+}
+
+.composition__photos--p3 {
+  left: 20%;
+  top: 10rem;
+}
+
+.composition__photos:hover {
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
+  z-index: 20;
+  outline: solid 1rem #7ed56f;
+  -webkit-transform: scale(1.02) translateY(-1rem);
+          transform: scale(1.02) translateY(-1rem);
+}
+
+.composition:hover .composition__photos:not(:hover) {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  -webkit-box-shadow: 0 10px 2rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 2rem rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  width: 80%;
+  margin: 0 10%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.feature-box__icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(#55c57a), to(#28b485));
+  background: linear-gradient(to right, #55c57a, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feature-box:hover {
+  -webkit-transform: translateY(-1.3rem) scale(1);
+          transform: translateY(-1.3rem) scale(1);
+}
+
+/**********************************************/
+/*animations*/
+/**********************************************/
+@-webkit-keyframes moveto_right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes moveto_right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveto_left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveto_left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+            transform: translateX(10rem);
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(-10rem);
+            transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes moveto-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveto-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/**********************************************/
+/*Header*/
+/**********************************************/
+.header {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(85, 197, 122, 0.69)), to(rgba(40, 180, 133, 0.7))), url("../image/hero.jpg");
+  background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.69), rgba(40, 180, 133, 0.7)), url("../image/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+.header__full-textbox {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 5rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem;
+}
+
+.u-row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.section-about {
+  background: rgba(250, 246, 246, 0.938);
+  padding: 25rem 0;
+  margin-top: -20vh;
+  height: 140vh;
+}
+
+.section-feature {
+  padding: 20rem 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(85, 197, 122, 0.69)), to(rgba(40, 180, 133, 0.7))), url("../image/nat-4.jpg");
+  background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.69), rgba(40, 180, 133, 0.7)), url("../image/nat-4.jpg");
+  background-size: cover;
+  height: 100vh;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+  margin-top: -8rem;
+}
+
+.section-feature > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+/*# sourceMappingURL=main.css.map */
