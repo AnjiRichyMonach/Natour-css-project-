@@ -1,17 +1,22 @@
 .feature-box{
     background-color:rgba($color-white,0.8);
-    padding: 2.5rem;
+    padding: 1.5rem;
     font-size: 1.5rem;
     text-align: center;
-    box-shadow: 0 10px 2rem rgba($color-black,0.6);
+    // box-shadow: 0 2px 2rem rgba($color-black,0.6); 
+    backface-visibility: hidden;
+         
+    border: 1rem solid transparent;
+    background-clip: padding-box;
+    height: 30rem;
     border-radius: 3px;
-    width:80%;
-    margin:0 10%;
+    width:90%;
+    margin:0 5%;
     // nt working
-    // &:not(:last-of-type)
-    // {margin-right: 5rem;}
-    transition: all 0.2s;
-    
+    // &:not(:last-child)
+    // {margin-right: 15rem;}
+    transition: all 0.5s;
+   
     &__icon{
         font-size: 6rem;
         margin-bottom: 0.5rem;
@@ -24,7 +29,9 @@
 
         }
     &:hover{
-        transform: translateY(-1.3rem) scale(1);   
+        transform: translateY(-1.3rem) scale(1) ;  
+        box-shadow: 0 10px 2rem rgba($color-black,0.6);  
+      
          }
     
 }

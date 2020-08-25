@@ -25,7 +25,7 @@ body {
   padding: 3rem;
   line-height: 1.7;
   font-weight: 400;
-  color: #777;
+  color: #777777;
 }
 
 /**********************************************/
@@ -58,8 +58,8 @@ body {
 
 .heading-secondary {
   font-size: 3.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#60ff60), to(#28b485));
-  background: linear-gradient(to right, #60ff60, #28b485);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(97, 255, 97, 0.808)), to(#27b485));
+  background: linear-gradient(to right, rgba(97, 255, 97, 0.808), #27b485);
   -webkit-background-clip: text;
   background-clip: text;
   text-transform: uppercase;
@@ -90,16 +90,15 @@ body {
   margin-bottom: 3rem;
 }
 
-
 /**********************************************/
 /*Button*/
 /**********************************************/
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 5rem;
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1.3rem 1.5rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   /*bcz its child is absolute*/
@@ -115,8 +114,8 @@ body {
 }
 
 .btn:hover::after {
-  -webkit-transform: scaleX(1.5) scaleY(1.6);
-          transform: scaleX(1.5) scaleY(1.6);
+  -webkit-transform: scaleX(1.5) scaleY(1.7);
+          transform: scaleX(1.5) scaleY(1.7);
   opacity: 0;
 }
 
@@ -128,7 +127,7 @@ body {
 }
 
 .btn--white {
-  color: #777;
+  color: #777777;
   background-color: #fff;
 }
 
@@ -136,12 +135,21 @@ body {
   background-color: #fff;
 }
 
+.btn--green {
+  color: #fff;
+  background-color: #80d671;
+}
+
+.btn--green::after {
+  background-color: #80d671;
+}
+
 .btn::after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 50%;
+  border-radius: 9rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -152,15 +160,15 @@ body {
 
 .btn--animated {
   /*backwards used to reverse animation flow*/
-  -webkit-animation: moveto-up 0.4s 3s ease-out backwards;
-          animation: moveto-up 0.4s 3s ease-out backwards;
+  -webkit-animation: moveto-up 0.3s 3s ease-out backwards;
+          animation: moveto-up 0.3s 3s ease-out backwards;
 }
 
 .btn-text:link, .btn-text:visited {
-  color: #7ed56f;
+  color: #80d671;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #7ed56f;
+  border-bottom: 1px solid #80d671;
   padding: 3px;
   font-size: 1.6rem;
   -webkit-transition: all 0.2s;
@@ -172,7 +180,7 @@ body {
           transform: translateY(-2px);
   -webkit-box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
-  background-color: #7ed56f;
+  background-color: #80d671;
   color: #fff;
 }
 
@@ -218,7 +226,7 @@ body {
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.9);
   z-index: 20;
-  outline: solid 1rem #7ed56f;
+  outline: solid 1rem #80d671;
   -webkit-transform: scale(1.02) translateY(-1rem);
           transform: scale(1.02) translateY(-1rem);
 }
@@ -230,24 +238,27 @@ body {
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 2.5rem;
+  padding: 1.5rem;
   font-size: 1.5rem;
   text-align: center;
-  -webkit-box-shadow: 0 10px 2rem rgba(0, 0, 0, 0.6);
-          box-shadow: 0 10px 2rem rgba(0, 0, 0, 0.6);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1rem solid transparent;
+  background-clip: padding-box;
+  height: 30rem;
   border-radius: 3px;
-  width: 80%;
-  margin: 0 10%;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  width: 90%;
+  margin: 0 5%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .feature-box__icon {
   font-size: 6rem;
   margin-bottom: 0.5rem;
   display: inline-block;
-  background: -webkit-gradient(linear, left top, right top, from(#60ff60), to(#28b485));
-  background: linear-gradient(to right, #60ff60, #28b485);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(97, 255, 97, 0.808)), to(#27b485));
+  background: linear-gradient(to right, rgba(97, 255, 97, 0.808), #27b485);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -256,6 +267,121 @@ body {
 .feature-box:hover {
   -webkit-transform: translateY(-1.3rem) scale(1);
           transform: translateY(-1.3rem) scale(1);
+  -webkit-box-shadow: 0 10px 2rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 2rem rgba(0, 0, 0, 0.6);
+}
+
+.story {
+  padding: 4rem;
+  padding-left: 10rem;
+  width: 63%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  vertical-align: middle;
+  font-size: 1.6rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+  margin-bottom: 8rem;
+}
+
+.story__shape {
+  height: 15rem;
+  width: 15rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem) skewX(12deg);
+          transform: translateX(-3rem) skewX(12deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: relative;
+}
+
+.story__shape img {
+  height: 100%;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  backface-visibility: hidden;
+}
+
+.story__text {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.story:hover .story__caption {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.story:hover .story__shape img {
+  -webkit-transform: scale(1) rotate(0.02deg);
+          transform: scale(1) rotate(0.02deg);
+  -webkit-filter: blur(3px) brightness(80%);
+          filter: blur(3px) brightness(80%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.book__form {
+  width: 60%;
+  padding: 6rem;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.form-input {
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  background-color: rbga(#fff, 0.5);
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  color: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #80d671;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: #777777;
 }
 
 /**********************************************/
@@ -363,8 +489,8 @@ body {
 /**********************************************/
 .header {
   position: relative;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(96, 255, 96, 0.7)), to(rgba(40, 180, 133, 0.7))), url("../image/hero.jpg");
-  background: linear-gradient(to right bottom, rgba(96, 255, 96, 0.7), rgba(40, 180, 133, 0.7)), url("../image/hero.jpg");
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(97, 255, 97, 0.7)), to(rgba(39, 180, 133, 0.7))), url("../image/hero.jpg");
+  background: linear-gradient(to right bottom, rgba(97, 255, 97, 0.7), rgba(39, 180, 133, 0.7)), url("../image/hero.jpg");
   background-size: cover;
   background-position: top;
   height: 95vh;
@@ -393,16 +519,17 @@ body {
 
 .tours-cards {
   position: relative;
-  height: 45rem;
+  height: 43rem;
   -webkit-perspective: 150rem;
           perspective: 150rem;
+  margin-bottom: 8rem;
 }
 
 .tours-cards__side {
   position: absolute;
   top: 0;
   left: 0;
-  height: 45rem;
+  height: 43rem;
   width: 80%;
   margin: 0 10%;
   -webkit-backface-visibility: hidden;
@@ -411,8 +538,9 @@ body {
   transition: all 0.8s ease;
   -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
+  border: 0.1rem double rgba(201, 199, 199, 0.849);
 }
 
 .tours-cards__side--front {
@@ -426,18 +554,18 @@ body {
 }
 
 .tours-cards__side--back-1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #ffb900), to(#ff7730));
-  background-image: linear-gradient(to right bottom, #ffb900 50%, #ff7730);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffbb00), to(#ff772e));
+  background-image: linear-gradient(to right bottom, #ffbb00, #ff772e);
 }
 
 .tours-cards__side--back-2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #60ff60), to(#28b485));
-  background-image: linear-gradient(to right bottom, #60ff60 50%, #28b485);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(97, 255, 97, 0.808)), to(#27b485));
+  background-image: linear-gradient(to right bottom, rgba(97, 255, 97, 0.808), #27b485);
 }
 
 .tours-cards__side--back-3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #2998ff), to(#5643fa));
-  background-image: linear-gradient(to right bottom, #2998ff 50%, #5643fa);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2997ff), to(#5442fa));
+  background-image: linear-gradient(to right bottom, #2997ff, #5442fa);
 }
 
 .tours-cards:hover .tours-cards__side--front {
@@ -451,7 +579,7 @@ body {
 }
 
 .tours-cards__pic {
-  height: 23rem;
+  height: 20rem;
   background-blend-mode: screen;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
@@ -459,22 +587,22 @@ body {
 }
 
 .tours-cards__pic-1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url("../image/nat-5.jpg");
-  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../image/nat-5.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffbb00), to(#ff772e)), url("../image/nat-5.jpg");
+  background-image: linear-gradient(to right bottom, #ffbb00, #ff772e), url("../image/nat-5.jpg");
 }
 
 .tours-cards__pic-2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#60ff60), to(#28b485)), url("../image/nat-5.jpg");
-  background-image: linear-gradient(to right bottom, #60ff60, #28b485), url("../image/nat-5.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(97, 255, 97, 0.808)), to(#27b485)), url("../image/nat-6.jpg");
+  background-image: linear-gradient(to right bottom, rgba(97, 255, 97, 0.808), #27b485), url("../image/nat-6.jpg");
 }
 
 .tours-cards__pic-3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url("../image/nat-5.jpg");
-  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../image/nat-5.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2997ff), to(#5442fa)), url("../image/nat-7.jpg");
+  background-image: linear-gradient(to right bottom, #2997ff, #5442fa), url("../image/nat-7.jpg");
 }
 
 .tours-cards__heading {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: 300;
   text-align: right;
   text-transform: uppercase;
@@ -482,28 +610,78 @@ body {
   position: absolute;
   top: 10rem;
   right: 2rem;
-  width: 75%;
+  width: 60%;
 }
 
 .tours-cards__heading--span {
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1rem;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
 
 .tours-cards__heading--span-1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.7)));
-  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.7) rgba(255, 119, 48, 0.7));
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 187, 0, 0.7)), to(rgba(255, 119, 46, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(255, 187, 0, 0.7), rgba(255, 119, 46, 0.7));
 }
 
 .tours-cards__heading--span-2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(96, 255, 96, 0.7)));
-  background-image: linear-gradient(to right bottom, rgba(96, 255, 96, 0.7) rgba(40, 180, 133, 0.7));
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(97, 255, 97, 0.7)), to(rgba(39, 180, 133, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(97, 255, 97, 0.7), rgba(39, 180, 133, 0.7));
 }
 
 .tours-cards__heading--span-3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.7)));
-  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.7) rgba(86, 67, 250, 0.7));
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 151, 255, 0.7)), to(rgba(84, 66, 250, 0.7)));
+  background-image: linear-gradient(to right bottom, rgba(41, 151, 255, 0.7), rgba(84, 66, 250, 0.7));
+}
+
+.tours-cards__details ul {
+  list-style: none;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tours-cards__details ul li {
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 1.6rem;
+}
+
+.tours-cards__details ul li:not(:last-child) {
+  border-bottom: 0.6px solid rgba(201, 199, 199, 0.3);
+}
+
+.tours-cards__cta {
+  position: relative;
+}
+
+.cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cta__price {
+  color: #fff;
+  padding: 3rem;
+}
+
+.cta__price--only {
+  font-size: 2rem;
+}
+
+.cta__price--box {
+  font-size: 5rem;
+  font-weight: 100;
+  margin-bottom: 8rem;
+}
+
+.cta__btn {
+  padding-top: 0.9rem 1.5rem !important;
 }
 
 .u-center-text {
@@ -511,7 +689,11 @@ body {
 }
 
 .u-margin-bottom-large {
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
+}
+
+.u-margin-top-large {
+  margin-top: 6rem;
 }
 
 .u-margin-bottom-medium {
@@ -536,10 +718,10 @@ body {
 
 .section-feature {
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(96, 255, 96, 0.69)), to(rgba(40, 180, 133, 0.7))), url("../image/nat-4.jpg");
-  background: linear-gradient(to right bottom, rgba(96, 255, 96, 0.69), rgba(40, 180, 133, 0.7)), url("../image/nat-4.jpg");
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(97, 255, 97, 0.69)), to(rgba(39, 180, 133, 0.7))), url("../image/nat-4.jpg");
+  background: linear-gradient(to right bottom, rgba(97, 255, 97, 0.69), rgba(39, 180, 133, 0.7)), url("../image/nat-4.jpg");
   background-size: cover;
-  height: 85vh;
+  height: 80vh;
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
   margin-top: -10rem;
@@ -552,8 +734,28 @@ body {
 
 .section-tours {
   background-color: rgba(250, 246, 246, 0.938);
-  padding: 10rem 0;
+  padding: 15rem 0 5rem 0;
   margin-top: -5rem;
-  height: 80rem;
+  height: 90rem;
+}
+
+.section-stories {
+  padding: 5rem 0;
+  background-color: rgba(250, 246, 246, 0.938);
+}
+
+.section-book {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(97, 255, 97, 0.808)), to(#27b485));
+  background-image: linear-gradient(to right bottom, rgba(97, 255, 97, 0.808), #27b485);
+  padding: 10rem 0;
+}
+
+.book {
+  background-size: 100%;
+  height: 46rem;
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url("../image/nat-10.jpg");
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=main.css.map */

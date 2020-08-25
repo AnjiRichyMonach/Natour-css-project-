@@ -7,9 +7,9 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 5rem;
     display: inline-block;
-    padding: 1.5rem 3rem;
+    padding: 1.3rem 1.5rem;
     transition: all 0.2s;
     /*bcz its child is absolute*/
     position: relative;
@@ -22,7 +22,7 @@
     box-shadow: 0 10px 20px rgba($color-black, 0.2);
 
     &::after {
-      transform: scaleX(1.5) scaleY(1.6);
+      transform: scaleX(1.5) scaleY(1.7);
       opacity: 0;
     }
   }
@@ -39,14 +39,22 @@
     &::after {
       background-color: $color-white;
     }
+   
   }
+  &--green {
+    color: $color-white;
+    background-color: $color-primary;
+
+    &::after {
+      background-color: $color-primary;
+    }}
 
   &::after {
     content: "";
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 50%;
+    border-radius: 9rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -57,7 +65,7 @@
 
   &--animated {
     /*backwards used to reverse animation flow*/
-    animation: moveto-up 0.4s 3s ease-out backwards;
+    animation: moveto-up 0.3s 3s ease-out backwards;
   }
 }
 
