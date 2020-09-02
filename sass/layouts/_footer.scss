@@ -1,0 +1,94 @@
+.footer{
+    background-color: rgb(80, 78, 78);
+    padding: 3rem 5rem;
+    font-size: 1.3rem;
+    height: 60vh;
+    @include reponsive(tab-port){
+        padding: 8rem 0;
+    }
+    @include reponsive(phone){
+        padding: 5rem 2rem;
+    }
+    &__logo-box{
+    text-align: center;
+    margin-bottom: 8rem;
+    display: block; 
+    @include reponsive(tab-land){
+        margin-bottom: 5rem;
+    }
+
+    
+    @include reponsive(tab-port){
+        margin-bottom: 3rem;
+    }
+
+    
+    }
+    &__logo{
+        width: 10rem;
+        height: auto;
+        img{
+        @include reponsive(tab-land){
+            width: 10rem;
+            
+        }
+        @include reponsive(tab-port){
+            width: 7rem;
+            
+        }
+        @include reponsive(phone){
+            width: 5rem;
+           
+        }
+    }
+        
+    }
+    &__nav{
+        border-top:3px solid $color-grey-dark;
+        padding-top: 2rem;
+        display: inline-block;
+        @include reponsive(tab-port){
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    &__item{
+    display:inline-block;
+    &:not(:last-child){
+        margin-right: 1.5rem;
+    }
+    }
+    &__list{
+        list-style: none;
+    }
+    
+    &__link{
+
+        &:link,
+        &:visited {
+            color: $color-grey-light-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.4s;
+            
+        }
+        &:hover,
+        &:active{
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black,.4);
+            transform: rotate(5deg) scale(1.2);
+        }
+    }
+    &__cpyright{
+        border-top:3px solid $color-grey-dark;
+        padding-top: 2rem;
+        width:80%;
+        float:right;
+        @include reponsive(tab-port){
+            width: 100%;
+            float:none;
+        }
+    }
+}

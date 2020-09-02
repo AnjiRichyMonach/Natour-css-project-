@@ -1,4 +1,6 @@
 
+
+// after and before used so that if after or before element created it also follow the code
 *,
 *::after,
 *::before{
@@ -8,10 +10,51 @@
 }
 
 html{
-  /*takah agr user default setting change kry ya zoom in kry tb font change ho*/
+  /*takah agr user default setting change kry ya zoom in kry tb font change ho
+  font size is 62.5% to default size
+  1 rem= 10px as we have set font size 10px*/
+  // 1 rem= 10px;   10px/16px=62.5%
   font-size: 62.5%;
+  
+  // if we use max-width then write larger query first
+// if we use min-width then write smaller query first
+
+@include reponsive(tab-land){
+  font-size: 56.25%;     // 1rem= 9px; 9/16=56.25%
+} 
+
+@include reponsive(tab-port){
+  font-size: 50%;        // 1rem= 8px; 8/16=50%
+}
+  
+@include reponsive(phone){
+    font-size: 43.75%;     // 1rem= 7px; 7/16=50%
+  }
+ 
+  @include reponsive(big-destop){
+    font-size: 75%;       // 1rem= 12px; 12/16=75%
+  }
+
 }
 
 body{
   box-sizing: border-box;
+  @include reponsive(tab-land){
+   
+  }
+
+
+  padding: 3rem;
+  @include reponsive(tab-port){
+    padding: 0;       // 1rem= 8px; 8/16=50%
+    background-color: $color-grey-light;
+  }
+  @include reponsive(phone){
+    padding: 0; 
+    background-color: $color-grey-light;
+  }
+}
+::selection{
+  background-color: $color-primary;
+  color:$color-white;
 }

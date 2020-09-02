@@ -8,10 +8,16 @@
          
     border: 1rem solid transparent;
     background-clip: padding-box;
-    height: 30rem;
+    // height: 30rem;
     border-radius: 3px;
     width:90%;
     margin:0 5%;
+    @include reponsive(tab-port){
+        width:80%;
+        margin:0 10%;
+        padding-bottom: 2.5rem;
+    }
+    
     // nt working
     // &:not(:last-child)
     // {margin-right: 15rem;}
@@ -26,6 +32,9 @@
     -webkit-background-clip: text;
     background-clip: text;
     color:transparent;
+    @include reponsive(tab-port){
+
+    }
 
         }
     &:hover{

@@ -1,53 +1,109 @@
 .section-about{
-background:$color-grey-light;
-padding:20rem 0;
+  background-color: $color-grey-light;
+padding: 20rem 5rem 15rem 5rem;
 margin-top:-20vh ;
-height: 130vh;
+height: 120vh;
+
+@include reponsive(tab-land){
+  padding: 15rem 5rem 5rem 5rem;
+  height: 140vh;
+
+}
+
+@include reponsive(tab-port){
+  padding: 15rem 0;
+}
+@include reponsive(phone){
+  padding: 15rem 2rem 5rem;
+}
+
 }
 
 .section-feature{
-  
-    padding: 15rem 0;
+
+
+    padding: 15rem 5rem 25rem 5rem;
     background: linear-gradient(to right bottom, rgba($color-primary-light, 0.69),
      rgba($color-primary-dark, 0.7)), 
     url("../image/nat-4.jpg");
   background-size: cover;
-  height: 80vh;
+ 
   transform :skewY(-5deg); 
+  height: 80vh;
   margin-top: -10rem;
+
+  @include reponsive(tab-land){
+    padding: 10rem 0 15rem 0;
+    margin-top: -5rem;
+
+  }
+
+  @include reponsive(tab-port){
+    padding: 5rem 5rem 10rem;
+    margin-top: -5rem;
+    height: 170vh;
+  }
+  @include reponsive(phone){
+    padding: 5rem 5rem 5rem;
+    margin-top: -15rem;
+    height: 160vh;
+  }
+
+
+ 
+  
   &>*{
     transform:skewY(5deg); 
 }
 
 }
 
+
+
 .section-tours{
   background-color:$color-grey-light;
-  padding: 15rem 0 5rem 0;
+  padding: 10rem 0 5rem 0;
   margin-top: -5rem;
-  height: 90rem;
+  // height: 90rem;
+  @include reponsive(tab-port){
+    padding: 10rem 0rem  5rem 0;
+  }
 }
 
 .section-stories{
-padding: 5rem 0;
-background-color: $color-grey-light;
+padding: 5rem 0 2rem 0rem;
+position:relative;
+@include reponsive(tab-port){
+  padding: 5rem 0rem;
+}
 }
 
 .section-book{
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-  
   padding: 10rem 0;
+  @include reponsive(tab-port){
+    padding: 10rem 0rem;
+  }
 }
 
 .book{
   
-  background-size: 100%;
-  height: 46rem;
+  background-size: cover;
+  // height: 46rem;
   background-image: linear-gradient(105deg, rgba($color-white, .7) 0%,
                     rgba($color-white, .7) 50%, 
                     transparent 50%), url("../image/nat-10.jpg");
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
 
+  @include reponsive(tab-port){
+    background-image: linear-gradient(105deg, rgba($color-white, .7) 0%,
+    rgba($color-white, .7) 65%, 
+    transparent 65%), url("../image/nat-10.jpg");
+  }
+  @include reponsive(phone){
+    background-image: linear-gradient(to right, rgba($color-white, .7) 0%,
+    rgba($color-white, .7) 100%, url("../image/nat-10.jpg"));
+  }
 
 }

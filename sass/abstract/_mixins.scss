@@ -1,0 +1,40 @@
+
+// media query manager
+/*
+0         600px= phone
+600px     900px= tab portrait
+900px     1200px= tab landscape
+1200px    1800px= destop
+1800px .........= big destop
+*/ 
+
+// breakpoint argument choices
+/*
+phone
+tab-port
+tab-land
+big-destop
+*/
+
+// 1em=16px  always use em for media queries 
+// if we use max-width then write larger query first
+// if we use min-width then write smaller query first
+
+@mixin reponsive($breakpoint){
+   
+    @if ($breakpoint== phone){
+        @media onlyscreen and  (max-width: 37.5em){@content};       //600px
+        }
+
+        @if ($breakpoint== tab-port){
+            @media  onlyscreen and (max-width: 56.25em){@content};     //900px
+        }
+
+        @if ($breakpoint== tab-land){
+            @media  onlyscreen and (max-width:75em ){@content};        //1200px
+        }
+    
+        @if ($breakpoint == big-destop){
+        @media  onlyscreen and (min-width: 112.5em){@content};        //1800px
+        }
+        }

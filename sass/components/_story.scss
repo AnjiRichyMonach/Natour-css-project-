@@ -4,23 +4,40 @@
     width: 63%;
     margin: 0 auto;
     box-shadow:0 3rem 6rem rgba($color-black, 0.1);
-    background-color: $color-white;
+    background-color: rgba($color-white,0.6);
     border-radius: 3px;
     vertical-align: middle;    
     font-size: $default-font-size;
     backface-visibility: hidden;
     transform: skewX(-12deg);
     margin-bottom: 8rem;
+
+   @include reponsive(phone){
+    transform: skewX(0deg);
+    padding-left: 7rem;
+    width: 80%;
+   }
   
     &__shape{
     height: 15rem;
     width: 15rem;
     float: left;
+    border-radius: 50%;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem)  skewX(12deg);
     backface-visibility: hidden;
     position: relative;
+    @supports( clip-path: polygon(0 0)) or  ( -website-clip-path: polygon(0 0)){
+        clip-path: circle(50% at 50% 50%); 
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none;
+    }
+
+
+    @include reponsive(phone){
+        transform:translateX(-3rem) skewX(0deg);
+       }
     
     img{
         height: 100%;
@@ -28,7 +45,6 @@
         backface-visibility: hidden;
         transition: all .3s ; 
         backface-visibility: hidden; 
-        
     }
 
     }
@@ -36,6 +52,9 @@
     &__text{
     transform: skewX(12deg);
     // backface-visibility: hidden;
+    @include reponsive(phone){
+        transform:skewX(0deg);
+       }
     }
 
     &__caption{
